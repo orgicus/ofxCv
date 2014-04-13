@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxAutoControlPanel.h"
+#include "ofxGui.h"
 #include "ofxCv.h"
 
 class testApp : public ofBaseApp{
@@ -17,6 +17,21 @@ public:
 	
 	ofxCv::Flow* curFlow;
 		
-	ofxAutoControlPanel panel;
+    ofxPanel panel;
+    ofParameter<float> pyrScale;
+    ofParameter<int> levels;
+    ofParameter<int> winsize;
+    ofParameter<int> iterations;
+    ofParameter<int> polyN;
+    ofParameter<float> polySigma;
+    ofParameter<bool> OPTFLOW_FARNEBACK_GAUSSIAN;
+
+    ofParameter<bool> useFarneback;
+    ofParameter<int> winSize;
+    ofParameter<int> maxLevel;
+
+    ofParameter<int> maxFeatures;
+    ofParameter<float> qualityLevel;
+    ofParameter<int> minDistance;
 };
 
